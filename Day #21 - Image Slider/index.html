@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="slide-container">
+    <div class="slide">
+      <img src="./assets/image-1.jpg" alt="Image 1" class="active" />
+      <img src="./assets/image-2.jpg" alt="Image 2" />
+      <img src="./assets/image-3.jpg" alt="Image 3" />
+      <img src="./assets/image-4.jpg" alt="Image 4" />
+      <img src="./assets/image-5.jpg" alt="Image 5" />
+    </div>
+    <div class="button">
+      <span class="next">&#10095;</span>
+      <span class="prev">&#10094;</span>
+    </div>
+    <div class="indicator">
+      <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+      <div class="dot" attr="1" onclick="switchImage(this)"></div>
+      <div class="dot" attr="2" onclick="switchImage(this)"></div>
+      <div class="dot" attr="3" onclick="switchImage(this)"></div>
+      <div class="dot" attr="4" onclick="switchImage(this)"></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-light: #faf9f6;
+  --color-dark: #301934;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-light);
+}
+
+body,
+html {
+  background-color: var(--color-dark);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+
+.heading {
+  background-position: center center;
+  background-size: 50% 50%;
+  bottom: 1.25rem;
+  padding: 1em 0;
+  font-weight: 900;
+  border-radius: 2.3em;
+  -webkit-border-radius: 2.3em;
+  -moz-border-radius: 2.3em;
+  -ms-border-radius: 2.3em;
+  -o-border-radius: 2.3em;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.heading h2 {
+  background-color: #800080;
+  font-weight: 900;
+  font-size: 1.6em;
+  border-radius: 2.3em;
+  -webkit-border-radius: 2.3em;
+  -moz-border-radius: 2.3em;
+  -ms-border-radius: 2.3em;
+  -o-border-radius: 2.3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.625rem 1.25rem;
+  display: inline-block;
+}
+
+.heading h1 {
+  background: linear-gradient(
+    to left,
+    #9f2b68,
+    #bf40bf,
+    #800020,
+    #702963,
+    #aa336a,
+    #301934,
+    #483248,
+    #5d3fd3,
+    #e6e6fa,
+    #cbc3e3,
+    #cf9fff,
+    #aa98a9,
+    #e0b0ff,
+    #915f6d,
+    #770737,
+    #da70d6,
+    #c3b1e1,
+    #ccccff,
+    #673147,
+    #a95c68,
+    #800080,
+    #51414f,
+    #953553,
+    #d8bfd8,
+    #630330,
+    #7f00ff,
+    #722f37,
+    #bdb5d5
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 6.2em;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.countdown {
+  background-color: #bf40bf;
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 1.25rem;
+  padding: 0.7em 0;
+  border-radius: 2.3em;
+  -webkit-border-radius: 2.3em;
+  -moz-border-radius: 2.3em;
+  -ms-border-radius: 2.3em;
+  -o-border-radius: 2.3em;
+  width: 90vw;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.625rem;
+}
+
+#box {
+  width: 28vmin;
+  height: 29vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+span.numbers {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 4em;
+  border-radius: 0.1em;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  -ms-border-radius: 0.1em;
+  -o-border-radius: 0.1em;
+}
+
+span.numbers:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+}
+
+span.text {
+  font-size: 1em;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  display: block;
+  width: 80%;
+  position: relative;
+  text-align: center;
+  bottom: 1.25rem;
+  padding: 0.7em 0;
+  font-weight: 900;
+  border-radius: 1.3em;
+  -webkit-border-radius: 1.3em;
+  -moz-border-radius: 1.3em;
+  -ms-border-radius: 1.3em;
+  -o-border-radius: 1.3em;
+}

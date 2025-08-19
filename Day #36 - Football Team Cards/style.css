@@ -1,0 +1,304 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-bg: #0c0e14;
+  --card-bg: #1a1c25;
+  --accent: #4f88e3;
+  --accent-hover: #3a6fc7;
+  --light-text: #f0f2f5;
+  --muted-text: #9ca3af;
+  --border: #2d3748;
+  --header-bg: #070a13;
+  --position-forward: #e3944f;
+  --position-midfielder: #4fe387;
+  --position-defender: #e34f4f;
+  --position-goalkeeper: #bd4fe3;
+  --captain-badge: #ffd700;
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-bg);
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--light-text);
+}
+
+.title i {
+  color: var(--captain-badge);
+  margin-right: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Team Info Section */
+.team-info {
+  margin-bottom: 2.5rem;
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label i {
+  margin-right: 0.5rem;
+  color: var(--accent);
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Filter Section */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.options-label {
+  font-size: 1.1rem;
+  color: var(--muted-text);
+  margin-bottom: 0.5rem;
+}
+
+.filter-select {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--light-text);
+  border: 2px solid var(--border);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  max-width: 400px;
+}
+
+.filter-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(79, 136, 227, 0.3);
+}
+
+/* Player Cards */
+.players-section {
+  margin-top: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.player-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--border);
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Position-specific styling */
+.player-card.forward {
+  border-top-color: var(--position-forward);
+}
+
+.player-card.midfielder {
+  border-top-color: var(--position-midfielder);
+}
+
+.player-card.defender {
+  border-top-color: var(--position-defender);
+}
+
+.player-card.goalkeeper {
+  border-top-color: var(--position-goalkeeper);
+}
+
+.player-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--light-text);
+  display: flex;
+  align-items: center;
+}
+
+.captain-badge {
+  background-color: var(--captain-badge);
+  color: #000;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+  font-weight: 700;
+}
+
+.player-card p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: var(--muted-text);
+  font-weight: 500;
+}
+
+.info-value {
+  font-weight: 600;
+}
+
+.nickname {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--header-bg);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer p {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.footer-info {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .team-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.player-card {
+  animation: fadeIn 0.3s ease-out forwards;
+}

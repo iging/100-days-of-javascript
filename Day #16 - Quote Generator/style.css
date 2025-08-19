@@ -1,0 +1,32 @@
+header {
+  padding: 20px;
+  background-color: #00aeff;
+  margin-top: 2em;
+  text-align: center;
+  color: white;
+}
+
+.quote {
+  font-size: 2em;
+}
+
+.btn-large {
+  margin: 0.5em;
+}
+
+.card {
+  text-align: center;
+  width: 45em;
+}
+
+.new-quote-button {
+  background-color: #00aeff;
+  border-color: rgb(21, 0, 255);
+  color: white;
+  font-weight: 600;
+}
+
+#button:hover {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradebook App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gradebook</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="student">Student View</button>
+            <button class="tab-btn" data-tab="teacher">Teacher View</button>
+        </div>
+
+        <div class="tab-content active" id="student-tab">
+            <div class="form-group">
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="student-score">Your Score:</label>
+                <input type="number" id="student-score" min="0" max="100" placeholder="Enter your score (0-100)">
+            </div>
+
+            <button id="check-result-btn" class="primary-btn">Check Result</button>
+
+            <div class="result-card" id="student-result">
+                <h3>Your Result</h3>
+                <div class="grade-display">--</div>
+                <p class="message-display"></p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="teacher-tab">
+            <div class="form-group">
+                <label>Class Name:</label>
+                <input type="text" id="class-name" placeholder="Enter class name">
+            </div>
+
+            <div class="student-list-section">
+                <h3>Student Scores</h3>
+                <div class="student-entry">
+                    <input type="text" placeholder="Student name" class="student-name-input">
+                    <input type="number" placeholder="Score" class="student-score-input" min="0" max="100">
+                    <button class="add-btn">+</button>
+                </div>
+
+                <div id="students-container"></div>
+
+                <button id="add-student-btn" class="secondary-btn">Add Another Student</button>
+                <button id="calculate-btn" class="primary-btn">Calculate Class Results</button>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h4>Class Average</h4>
+                    <div class="stat-value" id="class-average">--</div>
+                </div>
+                <div class="stat-box">
+                    <h4>Highest Score</h4>
+                    <div class="stat-value" id="highest-score">--</div>
+                </div>
+                <div class="stat-box">
+                    <h4>Lowest Score</h4>
+                    <div class="stat-value" id="lowest-score">--</div>
+                </div>
+                <div class="stat-box">
+                    <h4>Pass Rate</h4>
+                    <div class="stat-value" id="pass-rate">--</div>
+                </div>
+            </div>
+
+            <div id="grade-distribution"></div>
+        </div>
+    </div>
+</body>
+
+</html>

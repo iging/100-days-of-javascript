@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="app-content">
+            <div class="container">
+                <h1>Color Palette Generator</h1>
+
+                <!-- Color Preview Area -->
+                <div class="color-preview" id="colorPreview"></div>
+
+                <input type="text" id="color" placeholder="Enter a color (name, hex, rgb, hsl)">
+                <div class="btn-container">
+                    <button class="btn" id="generate"><i class="fas fa-random"></i> Generate</button>
+                    <button class="btn" id="copy"><i class="fas fa-copy"></i> Copy Code</button>
+                </div>
+
+                <!-- Color Combinations Section -->
+                <div class="combinations-section">
+                    <h2>Color Combinations</h2>
+
+                    <!-- Palette Type Selector -->
+                    <div class="palette-selector">
+                        <button class="palette-btn active" data-type="complementary">Complementary</button>
+                        <button class="palette-btn" data-type="analogous">Analogous</button>
+                        <button class="palette-btn" data-type="triadic">Triadic</button>
+                        <button class="palette-btn" data-type="monochromatic">Monochromatic</button>
+                    </div>
+
+                    <!-- Color Swatches -->
+                    <div class="color-palette" id="colorPalette">
+                        <!-- Swatches will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Color copied to clipboard!</div>
+</body>
+
+</html>

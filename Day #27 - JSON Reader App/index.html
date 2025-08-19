@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Reader App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <textarea id="json-inputs" placeholder="Paste your JSON here..."></textarea>
+        <div class="buttons">
+            <button onclick="parseAndDisplayJson()">Parse JSON</button>
+            <button onclick="loadStoreExample()">Load My Profile</button>
+            <input type="file" id="file-input" accept=".json, .txt">
+        </div>
+        <div class="json-viewer"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  background: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container h1 {
+  line-height: 1;
+  text-align: center;
+}
+
+form#calculator {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+form#calculator label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form#calculator input,
+form#calculator select {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 1rem;
+  outline: slateblue;
+}
+
+form#calculator button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: white;
+  transition: filter 0.3s;
+  -webkit-transition: filter 0.3s;
+  -moz-transition: filter 0.3s;
+  -ms-transition: filter 0.3s;
+  -o-transition: filter 0.3s;
+}
+
+form#calculator button[type="reset"] {
+  background: black;
+}
+
+form#calculator button[type="submit"] {
+  background: purple;
+}
+
+form#calculator button:hover {
+  filter: brightness(1.25);
+  -webkit-filter: brightness(1.25);
+}
+
+div#result {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out;
+  -webkit-transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out;
+  -moz-transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out;
+  -ms-transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out;
+  -o-transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out;
+}
+
+div#result.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.bmr {
+  margin-top: 20px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.bmr span {
+  background: rgba(105, 90, 205, 0.15);
+  color: purple;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.bmr h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  color: purple;
+}
+
+.bmr p {
+  color: black;
+  font-weight: 600;
+}
+
+.daily-calories {
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.daily-calories h3 {
+  padding: 5px 10px;
+  text-align: center;
+  color: black;
+}
+
+.activity-levels {
+  list-style-type: none;
+  border-top: 1px solid black;
+}
+
+.activity-levels li {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-levels li:nth-child(even) {
+  background: rgba(105, 90, 205, 0.15);
+}
+
+.activity-levels p {
+  line-height: 1.15;
+}
+
+.activity-levels .name {
+  display: block;
+  font-weight: 900;
+  color: black;
+}
+
+.activity-levels .description {
+  color: black;
+}
+
+.activity-levels .value {
+  font-weight: 900;
+}

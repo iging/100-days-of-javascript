@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="A visual decimal to binary converter that shows the recursive call stack animation" />
+    <meta name="keywords" content="decimal, binary, converter, javascript, recursion, call stack" />
+    <meta name="author" content="Developer" />
+    <title>Decimal to Binary Converter</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Decimal to Binary <span>Converter</span></h1>
+        <p class="subtitle">Visualize the recursive conversion process</p>
+    </header>
+
+    <main>
+        <section class="input-container" aria-labelledby="input-label">
+            <label for="number-input" id="input-label">Enter a decimal number:</label>
+            <div class="input-group">
+                <input type="number" name="decimal number input" id="number-input" class="number-input"
+                    placeholder="Enter a number" aria-describedby="input-help" min="0" inputmode="numeric" />
+                <small id="input-help" class="input-help">Try '5' to see the call stack animation</small>
+                <button class="convert-btn" id="convert-btn" aria-label="Convert number">Convert</button>
+            </div>
+        </section>
+
+        <section class="output-container" aria-live="polite">
+            <div class="result-container">
+                <h2>Result</h2>
+                <output id="result" for="number-input" class="result"></output>
+            </div>
+
+            <div class="call-stack-container">
+                <h2>Call Stack Visualization</h2>
+                <div id="animation-container" class="animation-container" aria-label="Call stack animation display">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn how recursion works in binary conversion</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

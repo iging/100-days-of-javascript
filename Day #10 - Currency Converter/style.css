@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --blue: #136a8a;
+  --green: #267871;
+  --white: #fff;
+  --exchange-rate-color: #555;
+  --input-background: rgba(119, 136, 153, 0.15);
+  --input-shadow: rgba(119, 136, 153, 0.35);
+  --input-border: #ddd;
+  --shadow-1: rgba(0, 0, 0, 0.25);
+  --shadow-2: rgba(0, 0, 0, 0.15);
+  --loading-bg-1: #c2cfd6;
+  --loading-bg-2: #f0f3f5;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+}
+
+main {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
+  display: grid;
+  gap: 30px;
+  box-shadow: 0 0 5px var(--shadow-1), 0 5px 10px var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--green);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls {
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+
+.control {
+  display: flex;
+  background: var(--input-background);
+  box-shadow: inset 0 0 3px var(--input-shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.control button {
+  --image: url(https://placehold.co/30/teal/white?text=$);
+  font-weight: 600;
+  background: transparent;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control button::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: teal var(--image) center no-repeat;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.control button::after {
+  font-family: "Material Symbols Outlined";
+  font-size: 1.5rem;
+  content: "\e5cf";
+}
+
+.control button:hover {
+  color: var(--green);
+}
+
+.control input {
+  font-size: 2.5rem;
+  text-align: end;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.control input::-webkit-inner-spin-button,
+.control input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.swap-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  line-height: 1;
+  box-shadow: 0 3px 5px var(--shadow-1);
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.swap-btn:hover {
+  background: var(--green);
+}
+
+.swap-btn span {
+  rotate: 90deg;
+  transition: inherit;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -ms-transition: inherit;
+  -o-transition: inherit;
+}
+
+.swap-btn:hover span {
+  rotate: 270deg;
+}
+
+.exchange-rate {
+  text-align: center;
+}
+
+.exchange-rate h5 {
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.exchange-rate span {
+  margin-top: 10px;
+  display: inline-block;
+  color: var(--exchange-rate-color);
+  font-weight: 500;
+}
+
+.exchange-rate span:empty {
+  min-width: 120px;
+  min-height: 1.5rem;
+}
+
+.drawer {
+  position: absolute;
+  inset: 0;
+  background: var(--white);
+  padding: 20px;
+  display: grid;
+  align-content: start;
+  gap: 20px;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  -webkit-transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -moz-transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -ms-transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -o-transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer.show {
+  transform: none;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+}
+
+.title button {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+  background: transparent;
+  opacity: 0.5;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.title button:hover {
+  opacity: 1;
+}
+
+.search input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  outline-color: var(--green);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.currency-list {
+  list-style-type: none;
+  overflow-y: auto;
+}
+
+.currency-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding-block: 5px;
+}
+
+.currency-list li:first-child {
+  padding-block-start: 0;
+}
+
+.currency-list *:not(li) {
+  pointer-events: none;
+}
+
+.skeleton {
+  position: relative;
+}
+
+.skeleton::after {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: 0.25rem;
+  content: "";
+  animation: loading 1s linear infinite alternate;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  -webkit-animation: loading 1s linear infinite alternate;
+}
+
+@keyframes loading {
+  from {
+    background: var(--loading-bg-1);
+  }
+  to {
+    background: var(--loading-bg-2);
+  }
+}

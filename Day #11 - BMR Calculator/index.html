@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMR Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>BMR Calculator</h1>
+    <form id="calculator">
+      <div>
+        <label for="weight">Weight (kg)</label>
+        <input type="text" id="weight" placeholder="Weight in kg" min="0" value="0" step="0.01" />
+      </div>
+      <div>
+        <label for="height">Height</label>
+        <input type="text" id="height" placeholder="Height in CM" min="0" value="0" step="0.01" />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="text" id="age" placeholder="Age" min="0" value="0" />
+      </div>
+      <div>
+        <label for="sex">Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button type="reset">Reset</button>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result">
+      <div class="bmr">
+        <span>BMR</span>
+        <h2 id="bmr">0</h2>
+        <p>calorie/day</p>
+      </div>
+      <div class="daily-calories">
+        <h3>Daily Calorie Needs</h3>
+        <ul class="activity-levels">
+          <li>
+            <p>
+              <strong class="name">Sedentary</strong>
+              <smal class="description" l>Little or no exercise.</smal>
+            </p>
+            <span class="value" id="sedentary">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Light</strong><small class="description">Exercise 1-3 times/week.</small>
+            </p>
+            <span class="value" id="light">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Moderate</strong><small class="description">Exercise 4-5 times/week.</small>
+            </p>
+            <span class="value" id="moderate">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Active</strong><small class="description">Daily exercise or intense exercise 3-4
+                times/week.</small>
+            </p>
+            <span class="value" id="active">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Very Active</strong><small class="description">Intense exercise 6-7
+                times/week.</small>
+            </p>
+            <span class="value" id="very-active">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Extra Active</strong><small class="description">Very intense exercise daily, or
+                physical job.</small>
+            </p>
+            <span class="value" id="extra-active">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
