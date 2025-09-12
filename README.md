@@ -7,16 +7,6 @@
 
 </div>
 
-## 📋 Table of Contents
-
-- [🌟 Overview](#-overview)
-- [🎨 Projects](#-projects)
-- [🛠️ Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [📁 Project Structure](#-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
 ## 🌟 Overview
 
 This repository contains 100+ unique JavaScript projects designed to help you master JavaScript and modern web development. The projects range from simple DOM manipulation to complex applications, covering various aspects of web development. Each project is self-contained and focuses on different JavaScript concepts and techniques.
@@ -44,6 +34,7 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 20**: Tip Calculator
 - **Day 35**: Date Formatter
 - **Day 39**: Decimal to Binary Converter
+- **Day 40**: Roman Numeral Converter
 
 ### 🎨 Creative & Design Tools
 
@@ -139,16 +130,6 @@ Day #XX - Project Name/
 └── README.md       # Project-specific documentation
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch for your feature
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -160,5 +141,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special thanks to the JavaScript community for continuous learning resources
 
 ---
-
-Built with ❤️ by iging
