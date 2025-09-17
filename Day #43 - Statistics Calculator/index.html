@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="A modern statistics calculator that computes mean, median, mode, range, variance, and standard deviation" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Statistics Calculator</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Statistics Calculator</h1>
+            <p class="subtitle">Enter a list of comma-separated numbers to calculate various statistical measures.</p>
+        </header>
+
+        <form id="statsForm" onsubmit="calculate(event);">
+            <div class="form-group">
+                <label for="numbers">Numbers (comma-separated)</label>
+                <input type="text" id="numbers" name="numbers" placeholder="e.g., 1, 2, 3, 4, 5"
+                    aria-label="Enter numbers separated by commas" aria-describedby="numberHint" required />
+                <small id="numberHint" class="hint">Separate numbers with commas (e.g., 5, 10, 15, 20)</small>
+                <div id="error" class="error-message" role="alert" aria-live="assertive"></div>
+            </div>
+            <button type="submit" class="calculate-btn">
+                <span class="btn-text">Calculate Statistics</span>
+            </button>
+        </form>
+
+        <div class="results" id="results" aria-live="polite">
+            <div class="result-item">
+                <p>
+                    The <dfn title="The average of all numbers">mean</dfn> of a list of numbers is the average,
+                    calculated by
+                    taking the sum of all numbers and dividing that by the count of numbers.
+                </p>
+                <p class="bold">Mean: <span id="mean" class="result-value">-</span></p>
+            </div>
+
+            <div class="result-item">
+                <p>
+                    The <dfn title="The middle value in a sorted list">median</dfn> of a list of numbers is the number
+                    that appears in
+                    the middle of the list, when sorted from least to greatest.
+                </p>
+                <p class="bold">Median: <span id="median" class="result-value">-</span></p>
+            </div>
+
+            <div class="result-item">
+                <p>
+                    The <dfn title="The most frequent number">mode</dfn> of a list of numbers is the number that appears
+                    most
+                    often in the list.
+                </p>
+                <p class="bold">Mode: <span id="mode" class="result-value">-</span></p>
+            </div>
+
+            <div class="result-item">
+                <p>
+                    The <dfn title="Difference between max and min">range</dfn> of a list of numbers is the difference
+                    between the
+                    largest and smallest numbers in the list.
+                </p>
+                <p class="bold">Range: <span id="range" class="result-value">-</span></p>
+            </div>
+
+            <div class="result-item">
+                <p>
+                    The <dfn title="Average of squared differences from the mean">variance</dfn> of a list of numbers
+                    measures how far the values
+                    are from the mean, on average.
+                </p>
+                <p class="bold">Variance: <span id="variance" class="result-value">-</span></p>
+            </div>
+
+            <div class="result-item">
+                <p>
+                    The <dfn title="Square root of variance">standard deviation</dfn> of a list of numbers is the square
+                    root of the variance, representing the amount of variation in the dataset.
+                </p>
+                <p class="bold">Standard Deviation: <span id="standardDeviation" class="result-value">-</span></p>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
