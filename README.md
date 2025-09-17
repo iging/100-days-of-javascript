@@ -35,6 +35,7 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 35**: Date Formatter
 - **Day 39**: Decimal to Binary Converter
 - **Day 40**: Roman Numeral Converter
+- **Day 42**: Number Sorter
 
 ### 🎨 Creative & Design Tools
 
