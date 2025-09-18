@@ -59,6 +59,7 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 27**: JSON Reader App
 - **Day 30**: Gradebook App
 - **Day 37**: Advanced Todo App
+- **Day 44**: Spreadsheet App
 
 ### 🌐 Web & API Integration
 
