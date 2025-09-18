@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #1a73e8;
+  --primary-hover: #1557b0;
+  --border-color: #e0e0e0;
+  --header-bg: #f8f9fa;
+  --cell-bg: #ffffff;
+  --cell-hover: #f1f3f4;
+  --text-color: #202124;
+  --text-secondary: #5f6368;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f1f3f4;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: white;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.formula-bar {
+  flex: 1;
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 40px;
+}
+
+.cell-address {
+  background-color: var(--header-bg);
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-color);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  min-width: 60px;
+  color: var(--text-secondary);
+}
+
+#formula-input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: white;
+}
+
+#formula-input:focus {
+  background-color: #f8f9fa;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f1f3f4;
+  color: var(--primary-color);
+}
+
+/* Spreadsheet Container */
+.spreadsheet-container {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  background-color: #f1f3f4;
+}
+
+.spreadsheet {
+  display: inline-block;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 50px repeat(10, 150px);
+  grid-auto-rows: 30px;
+  position: relative;
+}
+
+/* Cell Styles */
+.cell,
+.label {
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: var(--cell-bg);
+  transition: background-color 0.1s ease;
+}
+
+.cell:focus {
+  border: 2px solid var(--primary-color);
+  padding: 3px 7px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.label {
+  background-color: var(--header-bg);
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  user-select: none;
+  color: var(--text-secondary);
+}
+
+/* Row and Column Labels */
+.label.row-label {
+  left: 0;
+  z-index: 3;
+}
+
+.label.column-label {
+  top: 0;
+  z-index: 3;
+}
+
+/* Status Bar */
+.status-bar {
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #container {
+    grid-template-columns: 50px repeat(10, 120px);
+  }
+}
+
+@media (max-width: 992px) {
+  #container {
+    grid-template-columns: 50px repeat(10, 100px);
+  }
+}
+
+/* Animation for cell updates */
+@keyframes highlight-update {
+  0% {
+    background-color: rgba(26, 115, 232, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.cell.updated {
+  animation: highlight-update 1s ease-out;
+}
