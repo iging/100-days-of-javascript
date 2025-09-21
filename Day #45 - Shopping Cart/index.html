@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Sweet Delights</h1>
+    </header>
+
+    <main>
+        <button id="cart-btn" type="button" class="btn" aria-label="Shopping cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span id="show-hide-cart">Show</span> Cart
+            <span id="cart-count" class="cart-count">0</span>
+        </button>
+
+        <div id="cart-container">
+            <h2>Your Cart</h2>
+            <div id="products-container"></div>
+
+            <div id="cart-totals">
+                <div class="cart-total-row">
+                    <span>Items:</span>
+                    <span id="total-items">0</span>
+                </div>
+                <div class="cart-total-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="cart-total-row">
+                    <span>Taxes:</span>
+                    <span id="taxes">$0.00</span>
+                </div>
+                <div class="cart-total-row">
+                    <strong>Total:</strong>
+                    <strong id="total">$0.00</strong>
+                </div>
+            </div>
+
+            <button class="btn" id="clear-cart-btn">
+                Clear Cart
+            </button>
+        </div>
+
+        <div id="dessert-card-container"></div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
