@@ -80,6 +80,10 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 14**: Typing Speed Test
 - **Day 28**: Palindrome Checker
 
+### 🛍️ E-commerce & Shopping
+
+- **Day 45**: Shopping Cart
+
 ### 🛡️ Security & Privacy
 
 - **Day 41**: Spam Filter
