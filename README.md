@@ -24,6 +24,7 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 31**: Dragon Repeller
 - **Day 34**: Rock, Paper, Scissors, Lizard, Spock
 - **Day 46**: Platformer Game
+- **Day 47**: Dice Game
 
 ### 📊 Utility Applications
 
