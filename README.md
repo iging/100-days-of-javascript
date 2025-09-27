@@ -71,6 +71,7 @@ This repository contains 100+ unique JavaScript projects designed to help you ma
 - **Day 16**: Quote Generator
 - **Day 33**: Calorie Counter
 - **Day 36**: Football Team Cards
+- **Day 48**: Tech Writers Hub
 
 ### ⏱️ Time & Date Related
 
